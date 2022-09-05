@@ -1,0 +1,219 @@
+.w-webflow-badge{
+    display: none!important;
+}
+.img_s5{
+mix-blend-mode: color-burn;
+}
+.w-nav-overlay{
+z-index:-1;
+}
+@media screen and (device-width: 1440px){
+  .arrow_block_vegan_poke, .arrow_block_poke_spicy, .arrow_block_poke_jalapeno, .arrow_block_pork_bbq, .arrow_block_bowl_avocado, .arrow_block_korean_bbq, .arrow_block_hawaii{
+  left: 877px;
+  }
+  .background-video-2{
+    width: 766px;
+  }
+}
+  @media screen and (device-width: 1280px){
+  .arrow_block_vegan_poke, .arrow_block_poke_spicy, .arrow_block_poke_jalapeno, .arrow_block_pork_bbq, .arrow_block_bowl_avocado, .arrow_block_korean_bbq, .arrow_block_hawaii{
+  left: 750px;
+  }
+  .paragraph-4{
+      width: 546px;
+    }
+  .img_1_s2,.img_2_s2,.img_3_s2,.img_4_s2{
+    width: 265px;
+    }
+    .grid-2{
+    height: 523px;
+    }
+    .background-video_vegan_poke{
+        width: 652px;
+    }
+    .background-video_poke_jalapeno{
+    width: 654px;
+    }
+}
+  @media screen and (device-width: 1536px) {
+  .image_s1{
+    left: 533px;
+    top:226px;
+  }
+ .wrapper_img_s1{
+   width:350px;
+   height:350px;
+ }
+ .wrapper_text_s5{
+   left:30px;
+ }
+}
+@media screen and (device-width: 360px) and (device-height:640px){
+  .text-block_vegan_2,.text-block_poke_spicy,.text-block_pke_jalapelo,.text-block_5,.text-block_6,.text-block_7,.text-block_8{
+      left: 130px;
+  }
+  .s_3_table{
+  height: 220vh;
+  margin-top: 174px;
+  }
+}
+@media screen and (device-width: 360px) and (device-height:800px){
+  .wrapper_img_s1{
+  left: 24px;
+  top: -21px;
+  width: 200px;
+  height: 200px;
+  }
+  .s_2_table{
+  height: 111vh;
+  }
+    .s_3_table{
+  height: 188vh;  
+  margin-top: 81px;
+  }
+  .padding_352{
+   padding-top: 180px; 
+  }
+  .arrow_block_vegan_poke, .arrow_block_poke_spicy, .arrow_block_poke_jalapeno, .arrow_block_pork_bbq, .arrow_block_bowl_avocado, .arrow_block_korean_bbq, .arrow_block_hawaii{
+  top: 672px;
+  margin-bottom:32px;
+  }
+  .vegan_poke_text{
+  padding-top: 73px;
+  }
+  .wrapper_video_s3_poke_bowl_jalapelo{
+  margin-bottom: -4px;
+  }
+  .wrapper_video_s3_bbq_pork{
+  margin-bottom: -26px;
+  }
+  .wrapper_video_s3_korean_bbq{
+  margin-bottom: -1px;
+  }
+  .wrapper_video_s3_hawaii{
+  margin-bottom: -66px;
+  }
+}
+ @media screen and (device-width: 800px) and (device-height:1280px){
+  .image_s1 {
+  top:360px;
+  left:398px;
+  }
+  .s_3_table{
+  height: 103vh;   
+  }  
+}
+   @media screen and (device-width: 810px) and (device-height:1080px){
+  .image_s1 {
+  top:327px;
+  left:398px;
+  }
+  .s_3_table{
+  height: 121vh;   
+  }
+     }
+@media screen and (device-width: 375px) and (device-height:667px){
+  .text-block_vegan_2,.text-block_poke_spicy,.text-block_pke_jalapelo,.text-block_5,.text-block_6,.text-block_7,.text-block_8{
+      left: 130px;
+  }
+  .form-block{
+      width:375px;
+  }
+  .wrapper_img_s1{
+  top: -6px;
+    }
+  .s_3_table{
+  height: 149vh;
+  margin-top: 66px;
+  }
+}
+@media screen and (device-width: 375px) and (device-height:812px){
+  .wrapper_img_s1{
+    left: 24px;
+    top: -28px;
+    width: 200px;
+    height: 200px;
+  }
+  .container.nav,.conteiner.s1,.conteiner.s2,.conteiner.s3,.conteiner.s4,.conteiner.footer{
+      width:375px;
+  }
+  .text-block_vegan_2,.text-block_poke_spicy,.text-block_pke_jalapelo,.text-block_5,.text-block_6,.text-block_7,.text-block_8{
+      left: 137px;
+  }
+  .conteiner_table.s2{
+  height: 82%;
+  }
+  .form-block{
+      width:375px;
+  }
+.s_3_table{
+    height: 150vh;  
+  margin-top: -135px;
+  }
+  .padding_352{
+   padding-top: 208px; 
+  }
+}
+ @media screen and (device-width: 414px) and (device-height:896px){
+  .container.nav,.conteiner.s1,.conteiner.s2,.conteiner.s3,.conteiner.s4,.conteiner.footer{
+      width:414px;
+  }
+   .s_2_table{
+   height: 132vh;
+   }
+   .text-block_vegan_2,.text-block_poke_spicy,.text-block_pke_jalapelo,.text-block_5,.text-block_6,.text-block_7,.text-block_8{
+      left: 158px;
+  }
+  .form-block{
+      width:414px;
+  }
+   .conteiner_table.s2{
+   height: 73%;
+   }
+   .image_s1{
+       left: 10%;
+   }
+   .wrapper_img_s1{
+      left: 8px;
+      top: -45px;
+      width: 200px;
+      height: 200px;
+   } 
+.s_3_table{
+    height: 150vh;  
+  margin-top: -155px;
+  }
+}
+@media screen and (device-width: 412px) and (device-height:915px){
+  .container.nav,.conteiner.s1,.conteiner.s2,.conteiner.s3,.conteiner.s4,.conteiner.footer{
+      width:412px;
+  }
+  .text-block_vegan_2,.text-block_poke_spicy,.text-block_pke_jalapelo,.text-block_5,.text-block_6,.text-block_7,.text-block_8{
+      left: 157px;
+  }
+  .s_2_table{
+  height: 132vh;
+  }
+  .form-block{
+      width:412px;
+  }
+  .conteiner_table.s2{
+  height: 71%;
+  }
+ .image_s1 {
+  left:10%;
+  }
+  .wrapper_img_s1{
+  left: 45px;
+  top: -46px;
+  width: 200px;
+  height: 200px;
+  }
+.text-block-3{
+    margin-top: -24px;
+    }
+  .s_3_table{
+    height: 149vh;  
+  margin-top: -194px;
+  }
+}
