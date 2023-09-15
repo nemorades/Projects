@@ -1,4 +1,5 @@
 import "./Home.css";
+import { useEffect } from "react";
 import logo from "../images/logo-header.svg";
 import arrow_down from "../images/arrow-down.svg";
 import img_heading from "../images/img_heading.png";
@@ -13,8 +14,22 @@ import img_s6_3 from "../images/img_s2_600px_2-h.png";
 import img_s6_3_500 from "../images/img_s2_600px_2-h-p-500.png";
 import logo_footer from "../images/Logo-Footer.svg";
 import arrow_left from "../images/arrow_left_end.svg";
+import form_img_3 from "../images/img_3_modol_form.png";
+import form_img_2 from "../images/img_2_modol_form.png";
+import form_img from "../images/pop_up_image.png";
 
 function Home() {
+  const video_1 =
+    "https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1e54527f4ed77682c0917_11-transcode.mp4";
+  const video_2 =
+    "https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4";
+  useEffect(() => {
+    window.Webflow && window.Webflow.destroy();
+    window.Webflow && window.Webflow.ready();
+    window.Webflow && window.Webflow.require("ix2").init();
+    document.dispatchEvent(new Event("readystatechange"));
+  });
+
   return (
     <>
       <div
@@ -649,24 +664,12 @@ function Home() {
                       id="83f694cf-3179-5d12-c561-989b0b61868d-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("../src/videos/11-poster-00001.jpg")',
-                      }}
+                      src={video_1}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="videos/11-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="videos/11-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div id="menu-id" className="wrapper_text_s3">
@@ -1090,24 +1093,12 @@ function Home() {
                       id="5da4f315-7e5a-2910-639b-55068da7926f-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -1348,7 +1339,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -1759,24 +1750,12 @@ function Home() {
                       id="128f65d0-fc15-f589-9bc7-7898951cb851-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -2017,7 +1996,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -2428,24 +2407,12 @@ function Home() {
                       id="f63d9436-ef49-1eb0-1174-301195267cf6-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -2696,7 +2663,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -3113,24 +3080,12 @@ function Home() {
                       id="56a7372d-97ab-e783-29b9-439ed424cfc1-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -3373,7 +3328,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -3784,24 +3739,12 @@ function Home() {
                       id="56a7372d-97ab-e783-29b9-439ed424d0c7-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -4042,7 +3985,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -4453,24 +4396,12 @@ function Home() {
                       id="56a7372d-97ab-e783-29b9-439ed424d1cd-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -4692,23 +4623,12 @@ function Home() {
                       id="76c34137-f863-5d6f-68b1-fc449cbe5983-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage: 'url("videos/11-poster-00001.jpg")',
-                      }}
+                      src={video_1}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="videos/11-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="videos/11-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div id="menu-1280" className="wrapper_text_s3">
@@ -4721,7 +4641,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -5132,24 +5052,12 @@ function Home() {
                       id="76c34137-f863-5d6f-68b1-fc449cbe5a38-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -5390,7 +5298,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -5801,24 +5709,12 @@ function Home() {
                       id="76c34137-f863-5d6f-68b1-fc449cbe5b3e-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -6059,7 +5955,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -6470,24 +6366,12 @@ function Home() {
                       id="76c34137-f863-5d6f-68b1-fc449cbe5c44-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -6739,7 +6623,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -7150,24 +7034,12 @@ function Home() {
                       id="b80cd99b-0d5f-9690-af98-b9af65ab9a02-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -7379,9 +7251,7 @@ function Home() {
                       id="b80cd99b-0d5f-9690-af98-b9af65ab9a53-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage: 'url("videos/11-poster-00001.jpg")',
-                      }}
+                      src={video_1}
                       muted
                       playsInline
                       data-wf-ignore="true"
@@ -7408,7 +7278,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -7855,24 +7725,12 @@ function Home() {
                       id="b80cd99b-0d5f-9690-af98-b9af65ab9b08-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -8054,23 +7912,12 @@ function Home() {
                       id="b80cd99b-0d5f-9690-af98-b9af65ab9b59-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage: 'url("videos/11-poster-00001.jpg")',
-                      }}
+                      src={video_1}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="videos/11-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="videos/11-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3">
@@ -8083,7 +7930,7 @@ function Home() {
                     <div className="text-block_7">07</div>
                     <div className="text-block_8">08</div>
                     <img
-                      src="images/arrow_left_end.svg"
+                      src={arrow_left}
                       loading="lazy"
                       alt=""
                       className="arrow_left_end"
@@ -8526,24 +8373,12 @@ function Home() {
                       id="b80cd99b-0d5f-9690-af98-b9af65ab9c0e-video"
                       autoPlay
                       loop
-                      style={{
-                        backgroundImage:
-                          'url("https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-poster-00001.jpg")',
-                      }}
+                      src={video_2}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
-                    >
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="https://uploads-ssl.webflow.com/62a1b4dde70dbf170c53b273/62a1ff92195b0f4572018a1e_66 (converter)-transcode.webm"
-                        data-wf-ignore="true"
-                      />
-                    </video>
+                    ></video>
                   </div>
                 </div>
                 <div className="wrapper_text_s3_poke_avocado">
@@ -9367,34 +9202,34 @@ function Home() {
               </div>
               <div className="img_block_1_s6">
                 <img
-                  src="images/img_s_6_1.png"
+                  src={img_s6_1}
                   loading="lazy"
                   sizes="100vw"
-                  srcSet="images/img_s_6_1-p-500.png 500w, images/img_s_6_1.png 630w"
+                  srcSet={img_s6_1_500}
                   alt=""
                   className="image-9"
                 />
                 <img
-                  src="images/img_s_6_2.png"
+                  src={img_s6_2}
                   loading="lazy"
                   sizes="100vw"
-                  srcSet="images/img_s_6_2-p-500.png 500w, images/img_s_6_2.png 628w"
+                  srcSet={img_s6_2_500}
                   alt=""
                   className="image-15"
                 />
                 <img
-                  src="images/img_s2_600px_2-h.png"
+                  src={img_s6_3}
                   loading="lazy"
                   sizes="100vw"
-                  srcSet="images/img_s2_600px_2-h-p-500.png 500w, images/img_s2_600px_2-h-p-800.png 800w, images/img_s2_600px_2-h-p-1080.png 1080w, images/img_s2_600px_2-h.png 1280w"
+                  srcSet={img_s6_3_500}
                   alt=""
                   className="image-10"
                 />
                 <img
-                  src="images/img_s_6_4.png"
+                  src={img_s6_4}
                   loading="lazy"
                   sizes="100vw"
-                  srcSet="images/img_s_6_4-p-500.png 500w, images/img_s_6_4.png 628w"
+                  srcSet={img_s6_4_500}
                   alt=""
                   className="image-16"
                 />
@@ -9439,34 +9274,34 @@ function Home() {
             </div>
             <div className="img_block_1_s6">
               <img
-                src="images/img_s_6_1.png"
+                src={img_s6_1}
                 loading="lazy"
                 sizes="(max-width: 479px) 360px, (max-width: 630px) 100vw, (max-width: 991px) 630px, 100vw"
-                srcSet="./images/img_s_6_1-p-500.png 500w, images/img_s_6_1.png 630w"
+                srcSet={img_s6_1_500}
                 alt=""
                 className="image-9"
               />
               <img
-                src="images/img_s_6_2.png"
+                src={img_s6_2}
                 loading="lazy"
                 sizes="(max-width: 479px) 360px, (max-width: 628px) 100vw, (max-width: 991px) 628px, 100vw"
-                srcSet="./images/img_s_6_2-p-500.png 500w, images/img_s_6_2.png 628w"
+                srcSet={img_s6_2_500}
                 alt=""
                 className="image-15"
               />
               <img
-                src="images/img_s2_600px_2-h.png"
+                src={img_s6_3}
                 loading="lazy"
                 sizes="(max-width: 479px) 360px, (max-width: 767px) 100vw, (max-width: 991px) 800px, 100vw"
-                srcSet="./images/img_s2_600px_2-h-p-500.png 500w, images/img_s2_600px_2-h-p-800.png 800w, images/img_s2_600px_2-h-p-1080.png 1080w, images/img_s2_600px_2-h.png 1280w"
+                srcSet={img_s6_3_500}
                 alt=""
                 className="image-10"
               />
               <img
-                src="images/img_s_6_4.png"
+                src={img_s6_4}
                 loading="lazy"
                 sizes="(max-width: 479px) 360px, (max-width: 628px) 100vw, (max-width: 991px) 628px, 100vw"
-                srcSet="./images/img_s_6_4-p-500.png 500w, images/img_s_6_4.png 628w"
+                srcSet={img_s6_4_500}
                 alt=""
                 className="image-16"
               />
@@ -9694,24 +9529,9 @@ function Home() {
             data-w-id="f75678bf-110a-2a74-a726-47bab1dda22c"
             className="img_bg_form_modol text_block_form_modol"
           >
-            <img
-              src="./images/img_3_modol_form.png"
-              loading="lazy"
-              alt=""
-              className="image-14"
-            />
-            <img
-              src="./images/img_2_modol_form.png"
-              loading="lazy"
-              alt=""
-              className="image-13"
-            />
-            <img
-              src="./images/pop_up_image.png"
-              loading="lazy"
-              alt=""
-              className="image-12"
-            />
+            <img src={form_img_3} loading="lazy" alt="" className="image-14" />
+            <img src={form_img_2} loading="lazy" alt="" className="image-13" />
+            <img src={form_img} loading="lazy" alt="" className="image-12" />
           </div>
           <div
             data-w-id="b839e2e1-b491-b990-8764-3ddb98233c4c"
@@ -9769,24 +9589,9 @@ function Home() {
             data-w-id="38f1fd67-5d4e-2e3a-f79a-aaea885dfee6"
             className="img_bg_form_modol text_block_form_modol"
           >
-            <img
-              src="./images/img_3_modol_form.png"
-              loading="lazy"
-              alt=""
-              className="image-14"
-            />
-            <img
-              src="./images/img_2_modol_form.png"
-              loading="lazy"
-              alt=""
-              className="image-13"
-            />
-            <img
-              src="./images/pop_up_image.png"
-              loading="lazy"
-              alt=""
-              className="image-12"
-            />
+            <img src={form_img_3} loading="lazy" alt="" className="image-14" />
+            <img src={form_img_2} loading="lazy" alt="" className="image-13" />
+            <img src={form_img} loading="lazy" alt="" className="image-12" />
           </div>
           <div
             data-w-id="38f1fd67-5d4e-2e3a-f79a-aaea885dfeea"

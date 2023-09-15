@@ -1774,7 +1774,7 @@ th {
 .close_modol_menu {
   width: 20px;
   height: 20px;
-  background-image: url("../images/.svg");
+  background-image: url("../images/close_img.svg");
   background-position: 50%;
   background-size: cover;
   position: absolute;
@@ -1894,7 +1894,7 @@ th {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  background-image: url("../images/.svg");
+  background-image: url("../images/close_img.svg");
   background-position: 50%;
   background-size: cover;
   position: absolute;
@@ -2009,6 +2009,8 @@ th {
 .image-13,
 .image-14 {
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .text_span_adress_2 {
@@ -2256,7 +2258,7 @@ th {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   justify-content: flex-start;
   text-decoration: none;
-  display: none;
+  display: none !important;
   position: absolute;
   bottom: 193px;
   left: 193px;
@@ -2271,7 +2273,7 @@ th {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   justify-content: flex-start;
   text-decoration: none;
-  display: none;
+  display: none !important;
   position: absolute;
   bottom: 193px;
   left: 193px;
@@ -2521,6 +2523,7 @@ th {
 .monday_friday,
 .saturday {
   display: inline-block;
+  margin-bottom: 10px;
 }
 
 .text-block-8_vegan_poke {
@@ -3285,7 +3288,7 @@ th {
   padding: 0;
   font-size: 14px;
   font-weight: 600;
-  display: none;
+  display: none !important;
 }
 
 .nav-link-3-1280:hover {
@@ -3305,6 +3308,7 @@ th {
   padding: 0;
   font-size: 14px;
   font-weight: 600;
+  display: none !important;
 }
 
 .nav-link-3-1024:hover {
@@ -3314,12 +3318,18 @@ th {
 .nav-link-3-1024.w--current {
   color: #05533f;
 }
-
+@media (device-width: 1024px) {
+  .nav-link-3-1024 {
+    display: inline-block;
+  }
+}
 @media screen and (min-width: 1280px) {
   .s_1 {
     overflow: hidden;
   }
-
+  .nav-link-3-1280 {
+    display: inline-block;
+  }
   .container.nav {
     width: 1280px;
     background-color: rgba(0, 0, 0, 0);
@@ -6908,7 +6918,7 @@ th {
   }
 
   .google_map_img_1_mobile {
-    display: none;
+    display: none !important;
   }
 
   .text-block-12_2_mobile {
@@ -9259,7 +9269,7 @@ th {
   }
 
   .dropdown-toggle-2 {
-    padding: 0;
+    padding: 0px !important;
   }
 
   .dropdown-list-2 {
@@ -10883,7 +10893,7 @@ textarea.w-select {
 .w-background-video {
   position: relative;
   overflow: hidden;
-  height: 500px;
+  /* height: 500px; */
   color: white;
 }
 .w-background-video > video {
@@ -11087,7 +11097,7 @@ textarea.w-select {
   user-select: none;
   display: inline-block;
   cursor: pointer;
-  padding-right: 40px;
+  padding-right: 0px;
 }
 .w-dropdown-toggle:focus {
   outline: 0;
@@ -11569,8 +11579,6 @@ textarea.w-select {
   clear: none;
 }
 .w-nav {
-  position: relative;
-  background: #dddddd;
   z-index: 1000;
 }
 .w-nav:before,
@@ -11615,7 +11623,6 @@ textarea.w-select {
   top: 100%;
   left: 0;
   right: 0;
-  background: #c8c8c8;
   text-align: center;
   overflow: visible;
   min-width: 200px;
@@ -11657,7 +11664,7 @@ textarea.w-select {
 .w-nav-button {
   position: relative;
   float: right;
-  padding: 18px;
+  padding: 5px;
   font-size: 24px;
   display: none;
   cursor: pointer;
@@ -11672,7 +11679,6 @@ textarea.w-select {
   outline: 0;
 }
 .w-nav-button.w--open {
-  background-color: #c8c8c8;
   color: white;
 }
 .w-nav[data-collapse="all"] .w-nav-menu {
