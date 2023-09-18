@@ -1,4 +1,5 @@
 import "./Home.css";
+import { useEffect } from "react";
 import arrow_down from "../images/Arrow-1.svg";
 import img_s2 from "../images/image_s2.png";
 import img_s3_1 from "../images/image_1_s3.png";
@@ -16,6 +17,13 @@ function Home() {
     "https://uploads-ssl.webflow.com/6214c1901924aba94a7e0064/628b4d6a4dfae2808b8f86fa_The-revolutionary-bathroom-pods-technology-transcode.mp4";
   const vid_s5 =
     "https://uploads-ssl.webflow.com/6214c1901924aba94a7e0064/628b67c5aebcf9785fa08bd0_Manufacture-transcode.mp4";
+
+  useEffect(() => {
+    window.Webflow && window.Webflow.destroy();
+    window.Webflow && window.Webflow.ready();
+    window.Webflow && window.Webflow.require("ix2").init();
+    document.dispatchEvent(new Event("readystatechange"));
+  });
 
   return (
     <>
