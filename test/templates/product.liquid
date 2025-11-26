@@ -1,0 +1,38 @@
+<div class="wrapper product-page">
+  <div class="product-detail">
+    <div class="gallery">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title | escape }}">
+      {% endif %}
+      {% if product.images.size > 1 %}
+        {% for image in product.images offset: 1 %}
+          <img src="{{ image | image_url: width: 600 }}" alt="{{ product.title | escape }} image {{ forloop.index }}">
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="product-info">
+      <div class="badge">Featured product</div>
+      <h1>{{ product.title }}</h1>
+      <div class="price">{{ product.price | money }}</div>
+      <div class="page-content">{{ product.description }}</div>
+      {% form 'product', product %}
+        <div>
+          {% if product.variants.size > 1 %}
+            <label for="variant-select">Choose an option</label>
+            <select id="variant-select" name="id">
+              {% for variant in product.variants %}
+                <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>
+                  {{ variant.title }} — {{ variant.price | money }}
+                </option>
+              {% endfor %}
+            </select>
+          {% else %}
+            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+          {% endif %}
+        </div>
+        <button class="button" type="submit">Add to cart</button>
+      {% endform %}
+      <a class="button secondary" href="/collections/all">Browse all products</a>
+    </div>
+  </div>
+</div>

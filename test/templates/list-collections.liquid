@@ -1,0 +1,18 @@
+<div class="wrapper collection-listing">
+  <div class="section-header">
+    <div class="section-heading">
+      <div class="badge">Collections</div>
+      <h1>Shop by ritual</h1>
+    </div>
+  </div>
+  <div class="collection-grid">
+    {% for collection in collections %}
+      <article class="collection-card">
+        <h3><a href="{{ collection.url }}">{{ collection.title }}</a></h3>
+        <p>{{ collection.description | strip_html | truncate: 120 }}</p>
+      </article>
+    {% else %}
+      <p>No collections published yet.</p>
+    {% endfor %}
+  </div>
+</div>
