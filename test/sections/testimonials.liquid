@@ -1,0 +1,60 @@
+<section class="section testimonials" id="testimonials">
+  <div class="wrapper">
+    <div class="section-header">
+      {% if section.settings.badge != blank %}
+        <span class="badge">{{ section.settings.badge }}</span>
+      {% endif %}
+      <div class="section-heading">
+        <h2>{{ section.settings.heading }}</h2>
+        {% if section.settings.copy != blank %}
+          <p class="muted">{{ section.settings.copy }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="testimonial-grid">
+      {% for block in section.blocks %}
+        <article class="testimonial-card" {{ block.shopify_attributes }}>
+          {% if block.settings.quote != blank %}
+            <p class="quote">“{{ block.settings.quote }}”</p>
+          {% endif %}
+          <div class="testimonial-meta">
+            <div>
+              <strong>{{ block.settings.name }}</strong>
+              <p class="muted small">{{ block.settings.title }}</p>
+            </div>
+            {% if block.settings.rating != blank %}
+              <span class="rating">{{ block.settings.rating }} ★</span>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {"type": "text", "id": "badge", "label": "Label", "default": "Loved by clients"},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "Sensitive-skin stories worth sharing"},
+    {"type": "textarea", "id": "copy", "label": "Intro copy", "default": "Gentle radiance, clinically guided routines, and estheticians who listen."}
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {"type": "textarea", "id": "quote", "label": "Quote", "default": "My redness calmed in two weeks and my glow is unreal."},
+        {"type": "text", "id": "name", "label": "Name", "default": "Leah M."},
+        {"type": "text", "id": "title", "label": "Title / Skin type", "default": "Rosacea-prone skin"},
+        {"type": "text", "id": "rating", "label": "Rating", "default": "5.0"}
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {"name": "Testimonials", "category": "Content"}
+  ]
+}
+{% endschema %}

@@ -1,0 +1,61 @@
+<section class="section booking" id="booking">
+  <div class="wrapper">
+    <div class="section-header">
+      {% if section.settings.badge != blank %}
+        <span class="badge">{{ section.settings.badge }}</span>
+      {% endif %}
+      <div class="section-heading">
+        <h2>{{ section.settings.heading }}</h2>
+        {% if section.settings.copy != blank %}
+          <p class="muted">{{ section.settings.copy }}</p>
+        {% endif %}
+      </div>
+      <div class="actions">
+        {% if section.settings.primary_label != blank %}
+          <a class="button" href="{{ section.settings.primary_link }}">{{ section.settings.primary_label }}</a>
+        {% endif %}
+        {% if section.settings.secondary_label != blank %}
+          <a class="button secondary" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label }}</a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="card-grid">
+      {% for block in section.blocks %}
+        <article class="card booking-card" {{ block.shopify_attributes }}>
+          <div class="pill">Step {{ forloop.index }}</div>
+          <h3>{{ block.settings.title }}</h3>
+          <p class="muted">{{ block.settings.details }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Booking highlight",
+  "settings": [
+    {"type": "text", "id": "badge", "label": "Label", "default": "Book in minutes"},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "Your path to calm, glowing skin"},
+    {"type": "textarea", "id": "copy", "label": "Intro copy", "default": "Choose your ritual, reserve a time, and enjoy expert-led, soothing care."},
+    {"type": "text", "id": "primary_label", "label": "Primary button label", "default": "Schedule now"},
+    {"type": "url", "id": "primary_link", "label": "Primary button link", "default": "#contact"},
+    {"type": "text", "id": "secondary_label", "label": "Secondary button label", "default": "View services"},
+    {"type": "url", "id": "secondary_link", "label": "Secondary button link", "default": "#services"}
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {"type": "text", "id": "title", "label": "Title", "default": "Pick a facial focus"},
+        {"type": "textarea", "id": "details", "label": "Details", "default": "Hydration infusion, glass-skin glow, or barrier-repair for sensitivities."}
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {"name": "Booking highlight", "category": "Content"}
+  ]
+}
+{% endschema %}
