@@ -2,18 +2,22 @@
   "sections": {
     "hero": { "type": "hero" },
     "benefits": { "type": "benefits" },
-    "routine": { "type": "routine" },
     "services": { "type": "services" },
     "product_grid": { "type": "product-grid" },
+    "testimonials": { "type": "testimonials" },
+    "gallery": { "type": "gallery" },
+    "routine": { "type": "routine" },
     "payment_options": { "type": "payment-options" },
     "contact_cta": { "type": "contact-cta" }
   },
   "order": [
     "hero",
     "benefits",
-    "routine",
     "services",
     "product_grid",
+    "testimonials",
+    "gallery",
+    "routine",
     "payment_options",
     "contact_cta"
   ]

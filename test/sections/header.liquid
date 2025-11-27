@@ -1,12 +1,26 @@
 <header class="site-header">
-  <div class="wrapper">
-    <div class="brand">{{ section.settings.brand | escape }}</div>
-    <nav class="nav-links" aria-label="Main navigation">
+  <div class="wrapper header-grid">
+    <div class="brand">
+      {% if section.settings.logo != blank %}
+        <img src="{{ section.settings.logo | image_url: width: 200 }}" alt="{{ section.settings.brand | escape }} logo" loading="lazy" />
+      {% endif %}
+      <div>
+        <div class="brand-title">{{ section.settings.brand | escape }}</div>
+        <div class="brand-note">{{ section.settings.tagline | escape }}</div>
+      </div>
+    </div>
+
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="SiteNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+
+    <nav class="nav-links" id="SiteNav" aria-label="Main navigation">
       {% for block in section.blocks %}
         <a href="{{ block.settings.link }}">{{ block.settings.label }}</a>
       {% endfor %}
       {% if section.settings.cta_label != blank %}
-        <a class="button secondary" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label }}</a>
+        <a class="button tertiary" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label }}</a>
       {% endif %}
     </nav>
   </div>
@@ -19,10 +33,21 @@
   "class": "section-header sticky",
   "settings": [
     {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
       "type": "text",
       "id": "brand",
       "label": "Brand name",
       "default": "Radiant Facial Cosmetics"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Performance skincare, esthetician crafted"
     },
     {
       "type": "text",
@@ -51,6 +76,7 @@
   "default": {
     "settings": {
       "brand": "Radiant Facial Cosmetics",
+      "tagline": "Performance skincare, esthetician crafted",
       "cta_label": "Book consultation",
       "cta_link": "#contact"
     },

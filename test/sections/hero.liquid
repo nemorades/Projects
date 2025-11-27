@@ -16,14 +16,20 @@
       {% endfor %}
     </div>
   </div>
-  <div class="card">
-    <h3>{{ section.settings.card_title }}</h3>
-    <p>{{ section.settings.card_copy }}</p>
-    <ul>
-      <li>{{ section.settings.card_item_one }}</li>
-      <li>{{ section.settings.card_item_two }}</li>
-      <li>{{ section.settings.card_item_three }}</li>
-    </ul>
+  <div class="hero-media">
+    {% if section.settings.hero_image != blank %}
+      <img src="{{ section.settings.hero_image | image_url: width: 980 }}" alt="{{ section.settings.hero_image.alt | escape }}" loading="lazy" />
+    {% else %}
+      <div class="card">
+        <h3>{{ section.settings.card_title }}</h3>
+        <p>{{ section.settings.card_copy }}</p>
+        <ul>
+          <li>{{ section.settings.card_item_one }}</li>
+          <li>{{ section.settings.card_item_two }}</li>
+          <li>{{ section.settings.card_item_three }}</li>
+        </ul>
+      </div>
+    {% endif %}
   </div>
 </section>
 
@@ -31,6 +37,7 @@
 {
   "name": "Hero",
   "settings": [
+    { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
     { "type": "text", "id": "badge", "label": "Badge text", "default": "NEW: Hyper-hydration ritual" },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Facial cosmetic care for luminous, calm skin" },
     { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Personalized facials, active botanicals, and dermatologist-approved blends designed to soothe, firm, and illuminate." },
