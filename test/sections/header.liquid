@@ -15,6 +15,8 @@
 {% schema %}
 {
   "name": "Sticky header",
+  "tag": "header",
+  "class": "section-header sticky",
   "settings": [
     {
       "type": "text",
@@ -47,13 +49,18 @@
   ],
   "max_blocks": 6,
   "default": {
+    "settings": {
+      "brand": "Radiant Facial Cosmetics",
+      "cta_label": "Book consultation",
+      "cta_link": "#contact"
+    },
     "blocks": [
-    { "type": "nav_link", "settings": { "label": "Home", "link": "/" } },
-    { "type": "nav_link", "settings": { "label": "Products", "link": "/pages/products" } },
-    { "type": "nav_link", "settings": { "label": "Services", "link": "/pages/services" } },
-    { "type": "nav_link", "settings": { "label": "FAQ", "link": "/pages/faq" } },
-    { "type": "nav_link", "settings": { "label": "Payment", "link": "/pages/payment" } }
-  ]
+      { "type": "nav_link", "settings": { "label": "Home", "link": "/" } },
+      { "type": "nav_link", "settings": { "label": "Products", "link": "/pages/products" } },
+      { "type": "nav_link", "settings": { "label": "Services", "link": "/pages/services" } },
+      { "type": "nav_link", "settings": { "label": "FAQ", "link": "/pages/faq" } },
+      { "type": "nav_link", "settings": { "label": "Payment", "link": "/pages/payment" } }
+    ]
   },
   "presets": [
     { "name": "Sticky header" }
