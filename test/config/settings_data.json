@@ -1,6 +1,21 @@
 {
   "current": {
     "theme_style": "dark",
-    "settings": {}
+    "settings": {},
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {}
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {}
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {}
+      }
+    },
+    "order": ["header", "footer"]
   }
 }
