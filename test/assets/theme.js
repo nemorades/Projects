@@ -22,6 +22,18 @@
     });
   }
 
+  const managerCallForm = document.querySelector('[data-manager-call-form]');
+  if (managerCallForm) {
+    managerCallForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const success = managerCallForm.querySelector('[data-manager-call-success]');
+      if (success) {
+        success.hidden = false;
+        setTimeout(() => (success.hidden = true), 4200);
+      }
+    });
+  }
+
   const header = document.querySelector('.site-header');
   if (header) {
     const updateHeader = () => {

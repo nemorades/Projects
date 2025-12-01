@@ -1,0 +1,103 @@
+<section id="call-manager" class="wrapper manager-call">
+  <div class="card">
+    <div class="section-header">
+      <div class="section-heading">
+        <div class="badge">{{ section.settings.badge }}</div>
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.subheading }}</p>
+      </div>
+      {% if section.settings.supporting_text != blank %}
+        <p class="muted">{{ section.settings.supporting_text }}</p>
+      {% endif %}
+    </div>
+
+    <form class="stack" data-manager-call-form>
+      <div class="grid two">
+        <label class="field">
+          <span>Full name</span>
+          <input type="text" name="name" placeholder="Alex Morgan" required />
+        </label>
+        <label class="field">
+          <span>Phone number</span>
+          <input type="tel" name="phone" placeholder="+1 (555) 123-4567" required />
+        </label>
+      </div>
+
+      <div class="grid two">
+        <label class="field">
+          <span>Date</span>
+          <input type="date" name="date" required />
+        </label>
+        <label class="field">
+          <span>Preferred time</span>
+          <input type="time" name="time" required />
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Call type</span>
+        <select name="call_type">
+          {% for block in section.blocks %}
+            <option value="{{ block.settings.label | escape }}">{{ block.settings.label }}</option>
+          {% endfor %}
+        </select>
+      </label>
+
+      <label class="field">
+        <span>Notes for the manager</span>
+        <textarea name="notes" rows="3" placeholder="Skin concerns, timing details, product questions"></textarea>
+      </label>
+
+      <div class="grid two">
+        <label class="field">
+          <span>Time zone</span>
+          <input type="text" name="timezone" value="{{ section.settings.timezone }}" />
+        </label>
+        <label class="field checkbox">
+          <input type="checkbox" name="video" />
+          <span>I'd like a video call</span>
+        </label>
+      </div>
+
+      <div class="stack">
+        <button type="submit" class="button">Schedule call</button>
+        <p class="muted small">We will confirm your appointment within one business day.</p>
+        <p class="pill success" data-manager-call-success hidden>Request received — our manager will reach out shortly.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Manager call scheduler",
+  "settings": [
+    { "type": "text", "id": "badge", "label": "Badge", "default": "1:1 guidance" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Book a call with a skincare manager" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Choose your date and time for a personalized product walkthrough." },
+    { "type": "textarea", "id": "supporting_text", "label": "Supporting note", "default": "We tailor recommendations to your skin goals, budget, and timeline." },
+    { "type": "text", "id": "timezone", "label": "Default time zone", "default": "EST" }
+  ],
+  "blocks": [
+    {
+      "type": "call_type",
+      "name": "Call option",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Routine planning" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "default": {
+    "blocks": [
+      { "type": "call_type", "settings": { "label": "Routine planning" } },
+      { "type": "call_type", "settings": { "label": "Product pairing" } },
+      { "type": "call_type", "settings": { "label": "Post-treatment care" } },
+      { "type": "call_type", "settings": { "label": "Subscription setup" } }
+    ]
+  },
+  "presets": [
+    { "name": "Manager call scheduler" }
+  ]
+}
+{% endschema %}

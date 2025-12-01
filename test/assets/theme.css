@@ -779,3 +779,45 @@ form select:focus {
     align-items: flex-start;
   }
 }
+
+.manager-call .card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.manager-call form .field {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.manager-call form input,
+.manager-call form select,
+.manager-call form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: var(--text-primary);
+}
+
+.manager-call form input:focus,
+.manager-call form select:focus,
+.manager-call form textarea:focus {
+  outline: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px rgba(125, 83, 255, 0.15);
+}
+
+.manager-call .checkbox {
+  align-items: center;
+  grid-template-columns: auto 1fr;
+}
+
+.manager-call .pill.success {
+  width: fit-content;
+  background: rgba(0, 200, 155, 0.15);
+  color: #5ff0c2;
+  border: 1px solid rgba(95, 240, 194, 0.4);
+}
