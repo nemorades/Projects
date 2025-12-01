@@ -1,5 +1,6 @@
 {
   "sections": {
+    "header": { "type": "header" },
     "hero": { "type": "hero" },
     "benefits": { "type": "benefits" },
     "services": { "type": "services" },
@@ -8,9 +9,11 @@
     "gallery": { "type": "gallery" },
     "routine": { "type": "routine" },
     "payment_options": { "type": "payment-options" },
-    "contact_cta": { "type": "contact-cta" }
+    "contact_cta": { "type": "contact-cta" },
+    "footer": { "type": "footer" }
   },
   "order": [
+    "header",
     "hero",
     "benefits",
     "services",
@@ -19,6 +22,7 @@
     "gallery",
     "routine",
     "payment_options",
-    "contact_cta"
+    "contact_cta",
+    "footer"
   ]
 }
