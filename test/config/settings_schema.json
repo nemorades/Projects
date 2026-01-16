@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Theme settings",
+    "settings": [
+      { "type": "text", "id": "brand_accent", "label": "Accent word", "default": "Radiant" },
+      { "type": "color", "id": "brand_primary", "label": "Primary hue", "default": "#a0e9d1" },
+      { "type": "color", "id": "brand_secondary", "label": "Secondary hue", "default": "#7fd9ff" },
+      { "type": "color", "id": "background", "label": "Background", "default": "#0d1118" },
+      { "type": "text", "id": "meta_description", "label": "SEO description", "default": "Luxurious, sensitive-skin facial cosmetics with custom rituals and flexible payments." }
+    ]
+  }
+]

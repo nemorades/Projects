@@ -1,0 +1,24 @@
+{% section 'header' %}
+
+<div class="wrapper page-default">
+  <div class="section-header">
+    <div class="section-heading">
+      <div class="badge">Account</div>
+      <h1>Create account</h1>
+    </div>
+  </div>
+  {% form 'create_customer' %}
+    {{ form.errors | default_errors }}
+    <label for="RegisterFirstName">First name</label>
+    <input type="text" name="customer[first_name]" id="RegisterFirstName" autocomplete="given-name">
+    <label for="RegisterLastName">Last name</label>
+    <input type="text" name="customer[last_name]" id="RegisterLastName" autocomplete="family-name">
+    <label for="RegisterEmail">Email</label>
+    <input type="email" name="customer[email]" id="RegisterEmail" autocomplete="email" required>
+    <label for="RegisterPassword">Password</label>
+    <input type="password" name="customer[password]" id="RegisterPassword" autocomplete="new-password" required>
+    <button class="button" type="submit">Create</button>
+  {% endform %}
+</div>
+
+{% section 'footer' %}

@@ -1,0 +1,76 @@
+<section class="wrapper hero" id="hero">
+  <div class="copy">
+    <div class="badge">{{ section.settings.badge }}</div>
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.subheading }}</p>
+    <div class="actions">
+      <a class="button" href="{{ section.settings.primary_link }}">{{ section.settings.primary_label }}</a>
+      <a class="button secondary" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label }}</a>
+    </div>
+    <div class="stat-grid">
+      {% for block in section.blocks %}
+        <div class="stat">
+          <strong>{{ block.settings.figure }}</strong>
+          <span>{{ block.settings.caption }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="hero-media">
+    {% if section.settings.hero_image != blank %}
+      <img src="{{ section.settings.hero_image | image_url: width: 980 }}" alt="{{ section.settings.hero_image.alt | escape }}" loading="lazy" />
+    {% else %}
+      <div class="card">
+        <h3>{{ section.settings.card_title }}</h3>
+        <p>{{ section.settings.card_copy }}</p>
+        <ul>
+          <li>{{ section.settings.card_item_one }}</li>
+          <li>{{ section.settings.card_item_two }}</li>
+          <li>{{ section.settings.card_item_three }}</li>
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
+    { "type": "text", "id": "badge", "label": "Badge text", "default": "NEW: Hyper-hydration ritual" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Facial cosmetic care for luminous, calm skin" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Personalized facials, active botanicals, and dermatologist-approved blends designed to soothe, firm, and illuminate." },
+    { "type": "text", "id": "primary_label", "label": "Primary CTA label", "default": "Book a glow session" },
+    { "type": "url", "id": "primary_link", "label": "Primary CTA link", "default": "#services" },
+    { "type": "text", "id": "secondary_label", "label": "Secondary CTA label", "default": "Meet your esthetician" },
+    { "type": "url", "id": "secondary_link", "label": "Secondary CTA link", "default": "#contact" },
+    { "type": "text", "id": "card_title", "label": "Side card title", "default": "Gentle enough for sensitive skin" },
+    { "type": "textarea", "id": "card_copy", "label": "Side card copy", "default": "We pair ceramide-rich hydration with calming adaptogens to reinforce the skin barrier and achieve a soft, refined glow." },
+    { "type": "text", "id": "card_item_one", "label": "Card bullet 1", "default": "Barrier-safe, fragrance-free options" },
+    { "type": "text", "id": "card_item_two", "label": "Card bullet 2", "default": "Custom facial massage choreography" },
+    { "type": "text", "id": "card_item_three", "label": "Card bullet 3", "default": "Clinically-backed brightening actives" }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "settings": [
+        { "type": "text", "id": "figure", "label": "Figure", "default": "98%" },
+        { "type": "text", "id": "caption", "label": "Caption", "default": "Saw smoother texture" }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "default": {
+    "blocks": [
+      { "type": "stat", "settings": { "figure": "98%", "caption": "Saw smoother texture" } },
+      { "type": "stat", "settings": { "figure": "72h", "caption": "Moisture retention" } },
+      { "type": "stat", "settings": { "figure": "4.9★", "caption": "Client satisfaction" } }
+    ]
+  },
+  "presets": [
+    { "name": "Hero" }
+  ]
+}
+{% endschema %}

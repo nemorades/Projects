@@ -1,0 +1,56 @@
+<section class="section ingredients" id="ingredients">
+  <div class="wrapper">
+    <div class="section-header">
+      {% if section.settings.badge != blank %}
+        <span class="badge">{{ section.settings.badge }}</span>
+      {% endif %}
+      <div class="section-heading">
+        <h2>{{ section.settings.heading }}</h2>
+        {% if section.settings.copy != blank %}
+          <p class="muted">{{ section.settings.copy }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="card-grid">
+      {% for block in section.blocks %}
+        <article class="card ingredient-card" {{ block.shopify_attributes }}>
+          {% if block.settings.icon != blank %}
+            <div class="pill">{{ block.settings.icon }}</div>
+          {% endif %}
+          <h3>{{ block.settings.name }}</h3>
+          <p class="muted">{{ block.settings.benefit }}</p>
+          {% if block.settings.highlight != blank %}
+            <div class="tag">{{ block.settings.highlight }}</div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ingredients",
+  "settings": [
+    {"type": "text", "id": "badge", "label": "Label", "default": "Ingredient story"},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "Clinically gentle, botanically rich"},
+    {"type": "textarea", "id": "copy", "label": "Intro copy", "default": "We choose calming actives and barrier-loving hydrators that keep your glow soothed."}
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingredient",
+      "settings": [
+        {"type": "text", "id": "icon", "label": "Icon or emoji", "default": "🌸"},
+        {"type": "text", "id": "name", "label": "Name", "default": "Camellia Seed Oil"},
+        {"type": "textarea", "id": "benefit", "label": "Benefit", "default": "Silky moisture that strengthens your barrier without clogging pores."},
+        {"type": "text", "id": "highlight", "label": "Highlight", "default": "Non-comedogenic"}
+      ]
+    }
+  ],
+  "max_blocks": 9,
+  "presets": [
+    {"name": "Ingredients", "category": "Content"}
+  ]
+}
+{% endschema %}

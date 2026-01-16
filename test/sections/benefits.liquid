@@ -1,0 +1,54 @@
+<section id="benefits" class="wrapper">
+  <div class="section-header">
+    <div>
+      <div class="badge">{{ section.settings.badge }}</div>
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
+    <a class="button secondary" href="{{ section.settings.link }}">{{ section.settings.link_label }}</a>
+  </div>
+  <div class="card-grid">
+    {% for block in section.blocks %}
+      <div class="card">
+        <div class="tag">{{ block.settings.tag }}</div>
+        <h3>{{ block.settings.title }}</h3>
+        <p>{{ block.settings.copy }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Benefits",
+  "settings": [
+    { "type": "text", "id": "badge", "label": "Badge", "default": "Why clients glow" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Every visit is custom-blended" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "From sensitive skin rescues to lifting massages, we design your experience with comfort-first formulas." },
+    { "type": "text", "id": "link_label", "label": "Link label", "default": "See ingredient philosophy" },
+    { "type": "url", "id": "link", "label": "Link", "default": "#services" }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        { "type": "text", "id": "tag", "label": "Tag", "default": "Derm-approved" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Safe for reactive complexions" },
+        { "type": "textarea", "id": "copy", "label": "Copy", "default": "Non-stripping cleansers, barrier-repair masks, and chilled gua sha to calm inflammation." }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "default": {
+    "blocks": [
+      { "type": "benefit", "settings": { "tag": "Derm-approved", "title": "Safe for reactive complexions", "copy": "Non-stripping cleansers, barrier-repair masks, and chilled gua sha to calm inflammation." } },
+      { "type": "benefit", "settings": { "tag": "Brightening", "title": "Even tone, refined pores", "copy": "Vitamin C infusions, LED support, and gentle exfoliants for smooth radiance." } },
+      { "type": "benefit", "settings": { "tag": "Holistic", "title": "Mindful ritual", "copy": "Lymphatic drainage, scalp massage, and aromatherapy-free relaxation to unwind tension." } }
+    ]
+  },
+  "presets": [
+    { "name": "Benefits" }
+  ]
+}
+{% endschema %}

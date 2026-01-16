@@ -1,0 +1,53 @@
+<section class="section gallery" id="gallery">
+  <div class="wrapper">
+    <div class="section-header">
+      {% if section.settings.badge != blank %}
+        <span class="badge">{{ section.settings.badge }}</span>
+      {% endif %}
+      <div class="section-heading">
+        <h2>{{ section.settings.heading }}</h2>
+        {% if section.settings.copy != blank %}
+          <p class="muted">{{ section.settings.copy }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="gallery-grid">
+      {% for block in section.blocks %}
+        <figure class="gallery-card" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.alt | escape }}">
+          {% endif %}
+          {% if block.settings.caption != blank %}
+            <figcaption>{{ block.settings.caption }}</figcaption>
+          {% endif %}
+        </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Gallery",
+  "settings": [
+    {"type": "text", "id": "badge", "label": "Label", "default": "Studio moments"},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "A softer glow, captured"},
+    {"type": "textarea", "id": "copy", "label": "Intro copy", "default": "Peek inside our facials, textures, and the calming space we created for you."}
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {"type": "image_picker", "id": "image", "label": "Image"},
+        {"type": "text", "id": "alt", "label": "Alt text", "default": "Facial cosmetic care"},
+        {"type": "text", "id": "caption", "label": "Caption", "default": "Before & after calming facial"}
+      ]
+    }
+  ],
+  "max_blocks": 9,
+  "presets": [
+    {"name": "Gallery", "category": "Content"}
+  ]
+}
+{% endschema %}

@@ -1,0 +1,17 @@
+{% section 'header' %}
+
+<div class="wrapper page-default">
+  <div class="section-header">
+    <div class="section-heading">
+      <div class="badge">Article</div>
+      <h1>{{ article.title }}</h1>
+      <p>{{ article.excerpt | strip_html }}</p>
+    </div>
+    <a class="button secondary" href="{{ blog.url }}">Back to journal</a>
+  </div>
+  <div class="card">
+    {{ article.content }}
+  </div>
+</div>
+
+{% section 'footer' %}

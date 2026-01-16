@@ -1,0 +1,30 @@
+<footer class="footer">
+  <div class="wrapper">
+    <div>
+      <strong>{{ shop.name }}</strong><br>
+      <span>{{ section.settings.tagline }}</span>
+    </div>
+    <div>
+      <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a><br>
+      <span>{{ section.settings.phone }}</span>
+    </div>
+    <div>
+      <span>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. {{ section.settings.note }}</span>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "tagline", "label": "Tagline", "default": "Glowing complexions, gentle care." },
+    { "type": "text", "id": "email", "label": "Email", "default": "care@radiantfacial.com" },
+    { "type": "text", "id": "phone", "label": "Phone", "default": "+1 (555) 012-3456" },
+    { "type": "text", "id": "note", "label": "Footer note", "default": "Crafted with care for sensitive skin." }
+  ],
+  "presets": [
+    { "name": "Footer" }
+  ]
+}
+{% endschema %}

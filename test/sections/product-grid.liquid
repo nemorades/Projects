@@ -1,0 +1,89 @@
+<section id="products" class="wrapper">
+  <div class="section-header">
+    <div class="section-heading">
+      <div class="badge">{{ section.settings.badge }}</div>
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
+    {% if section.settings.cta_label != blank %}
+      <a class="button secondary" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label }}</a>
+    {% endif %}
+  </div>
+  <div class="product-grid">
+    {% for block in section.blocks %}
+      <article class="product-card">
+        <div class="product-media">
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title | escape }}">
+          {% endif %}
+          {% if block.settings.badge != blank %}
+            <span class="pill">{{ block.settings.badge }}</span>
+          {% endif %}
+        </div>
+        <div class="product-body">
+          <div class="product-top">
+            <h3>{{ block.settings.title }}</h3>
+            {% if block.settings.price != blank %}<span class="price">{{ block.settings.price }}</span>{% endif %}
+          </div>
+          <p>{{ block.settings.description }}</p>
+          <div class="product-actions">
+            {% if block.settings.cta_label != blank %}
+              <a class="button" href="{{ block.settings.cta_link }}">{{ block.settings.cta_label }}</a>
+            {% endif %}
+            {% if block.settings.secondary_label != blank %}
+              <a class="button secondary" href="{{ block.settings.secondary_link }}">{{ block.settings.secondary_label }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product showcase",
+  "settings": [
+    { "type": "text", "id": "badge", "label": "Badge", "default": "New arrivals" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Clinical-grade facial care" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Curated essentials designed for glow, calm, and barrier strength." },
+    { "type": "text", "id": "cta_label", "label": "Secondary action label", "default": "View services" },
+    { "type": "url", "id": "cta_link", "label": "Secondary action link", "default": "/pages/services" }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Soothing Cloud Cleanser" },
+        { "type": "text", "id": "price", "label": "Price", "default": "$38" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Ceramide-rich gel that dissolves sunscreen without stripping skin." },
+        { "type": "text", "id": "badge", "label": "Badge", "default": "Calm" },
+        { "type": "text", "id": "cta_label", "label": "Primary CTA label", "default": "Shop now" },
+        { "type": "url", "id": "cta_link", "label": "Primary CTA link", "default": "/products/soothing-cloud-cleanser" },
+        { "type": "text", "id": "secondary_label", "label": "Secondary CTA label", "default": "Ingredients" },
+        { "type": "url", "id": "secondary_link", "label": "Secondary CTA link", "default": "/pages/ingredients" },
+        { "type": "image_picker", "id": "image", "label": "Image" }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "default": {
+    "blocks": [
+      { "type": "product", "settings": { "title": "Soothing Cloud Cleanser", "price": "$38", "description": "Ceramide-rich gel that dissolves sunscreen without stripping skin.", "badge": "Calm", "cta_label": "Shop now", "cta_link": "/products/soothing-cloud-cleanser", "secondary_label": "Ingredients", "secondary_link": "/pages/ingredients" } },
+      { "type": "product", "settings": { "title": "Glass Skin Essence", "price": "$46", "description": "Niacinamide + licorice brighten while snow mushroom saturates hydration.", "badge": "Glow", "cta_label": "Shop now", "cta_link": "/products/glass-skin-essence", "secondary_label": "Routine", "secondary_link": "/pages/routine" } },
+      { "type": "product", "settings": { "title": "Peptide Dew Serum", "price": "$68", "description": "Tri-peptide complex visibly smooths while beta-glucan cuddles sensitive skin.", "badge": "Firm", "cta_label": "Shop now", "cta_link": "/products/peptide-dew-serum", "secondary_label": "Ingredients", "secondary_link": "/pages/ingredients" } },
+      { "type": "product", "settings": { "title": "Midnight Recovery Oil", "price": "$72", "description": "Blue tansy, bisabolol, and squalane rebalance redness overnight.", "badge": "Repair", "cta_label": "Shop now", "cta_link": "/products/midnight-recovery-oil", "secondary_label": "How to use", "secondary_link": "/pages/faq" } },
+      { "type": "product", "settings": { "title": "Barrier Veil Moisturizer", "price": "$54", "description": "Breathable moisture-seal with phytosterols and oat lipids for cushiony skin.", "badge": "Restore", "cta_label": "Shop now", "cta_link": "/products/barrier-veil-moisturizer", "secondary_label": "Reviews", "secondary_link": "/pages/testimonials" } },
+      { "type": "product", "settings": { "title": "Luminous Eye Concentrate", "price": "$58", "description": "Peptide eye gel with caffeine + algae to depuff and brighten undereyes.", "badge": "Brighten", "cta_label": "Shop now", "cta_link": "/products/luminous-eye-concentrate", "secondary_label": "Ingredients", "secondary_link": "/pages/ingredients" } },
+      { "type": "product", "settings": { "title": "Hydra Mist Toner", "price": "$32", "description": "Electrolyte-infused mist resets pH and layers hydration between steps.", "badge": "Hydrate", "cta_label": "Shop now", "cta_link": "/products/hydra-mist-toner", "secondary_label": "How to use", "secondary_link": "/pages/faq" } },
+      { "type": "product", "settings": { "title": "Velvet SPF Veil", "price": "$44", "description": "Mineral SPF 45 with zero white cast and featherlight blurring finish.", "badge": "Protect", "cta_label": "Shop now", "cta_link": "/products/velvet-spf-veil", "secondary_label": "Routine", "secondary_link": "/pages/routine" } },
+      { "type": "product", "settings": { "title": "Radiance Polish", "price": "$42", "description": "Enzyme micro-polish refines texture without microtears for glassy skin.", "badge": "Smooth", "cta_label": "Shop now", "cta_link": "/products/radiance-polish", "secondary_label": "Ingredients", "secondary_link": "/pages/ingredients" } },
+      { "type": "product", "settings": { "title": "Calm Down Mask", "price": "$48", "description": "Colloidal oat + panthenol wrap skin in a cooling, plush cream hug.", "badge": "Soothe", "cta_label": "Shop now", "cta_link": "/products/calm-down-mask", "secondary_label": "How to use", "secondary_link": "/pages/faq" } }
+    ]
+  },
+  "presets": [
+    { "name": "Product showcase" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,51 @@
+<section id="routine" class="wrapper">
+  <div class="section-header">
+    <div>
+      <div class="badge">{{ section.settings.badge }}</div>
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
+  </div>
+  <div class="routine-steps">
+    {% for block in section.blocks %}
+      <div class="card step">
+        <div class="step-number">{{ forloop.index }}</div>
+        <h3>{{ block.settings.title }}</h3>
+        <p>{{ block.settings.copy }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Glow routine",
+  "settings": [
+    { "type": "text", "id": "badge", "label": "Badge", "default": "Step-by-step" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Your ritual, personalized" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Consultation, facial sculpting, targeted masking, and at-home plans tailored to your complexion goals." }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Skin analysis" },
+        { "type": "textarea", "id": "copy", "label": "Copy", "default": "Barrier + hydration check, sensitivity mapping, and UV recovery snapshot." }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "default": {
+    "blocks": [
+      { "type": "step", "settings": { "title": "Skin analysis", "copy": "Barrier + hydration check, sensitivity mapping, and UV recovery snapshot." } },
+      { "type": "step", "settings": { "title": "Custom cleanse & exfoliation", "copy": "Enzyme polish or lactic dew drop depending on tolerance." } },
+      { "type": "step", "settings": { "title": "Massage & contour", "copy": "Lifting strokes, lymphatic drainage, and chilled globes to depuff." } },
+      { "type": "step", "settings": { "title": "Mask & infusion", "copy": "Ceramide veil, niacinamide serum press, and LED for radiance." } }
+    ]
+  },
+  "presets": [
+    { "name": "Glow routine" }
+  ]
+}
+{% endschema %}
